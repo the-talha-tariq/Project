@@ -30,6 +30,7 @@ const GenereList = (props: Props) => {
               src={getCroppedImageUrl(gener.image_background)}
             />
             <Button
+              paddingLeft={"2px"}
               fontWeight={
                 gener.id == props.selectedGenre?.id ? "bold" : "normal"
               }
@@ -37,7 +38,7 @@ const GenereList = (props: Props) => {
               fontSize="lg"
               variant="link"
             >
-              {gener.name}
+              {gener.name.length > 11 ? gener.name.slice(0, 10) : gener.name}
             </Button>
           </HStack>
         </ListItem>
