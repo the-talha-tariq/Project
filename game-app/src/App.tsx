@@ -2,6 +2,7 @@ import { Button, ButtonGroup, Show } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { useState } from "react";
 import GameGrid from "./components/GameGrid";
+import GameHeading from "./components/GameHeading";
 import GenereList from "./components/GenereList";
 import NavBar from "./components/NavBar";
 import PlatfornSelector from "./components/PlatfornSelector";
@@ -44,6 +45,7 @@ function App() {
           </GridItem>
         </Show>
         <GridItem area="main">
+          <GameHeading gameQuery={gameQuery}></GameHeading>
           <PlatfornSelector
             selectedPlatform={gameQuery.platform}
             onSelectPlatform={(platform) =>
