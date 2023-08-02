@@ -16,7 +16,11 @@ const GameGrid = (props: Props) => {
   return (
     <Box mx="auto" width="fit-content" paddingLeft={15} paddingRight={5}>
       {/* {error && <Text>{error}</Text>} */}
-      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 5 }} spacing={10}>
+      <SimpleGrid
+        columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
+        padding="6px"
+        spacing={6}
+      >
         {isLoading &&
           sekeleton.map((sekeleton) => (
             <GameCardSkeleton key={sekeleton}></GameCardSkeleton>
